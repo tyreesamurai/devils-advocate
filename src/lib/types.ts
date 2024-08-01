@@ -4,13 +4,13 @@ type sectionData = {
 };
 
 type question = {
-  question: string;
+  text: string;
   answers: answer[];
 };
 
 type answer = {
-  answer: string;
-  answerData: number;
+  text: string;
+  data: number;
 };
 
 export default sectionData;
