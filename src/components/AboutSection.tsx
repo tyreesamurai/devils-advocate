@@ -9,7 +9,7 @@ export default function AboutSection() {
           <h1 className="font-extrabold text-6xl mt-10 mb-4">
             Devil&apos;s Advocate
           </h1>
-          <p className="sm:w-4/5 w-1/2 mx-auto">
+          <p className="sm:w-full sm:p-2 lg:w-1/2 mx-auto">
             As Americans we are a very diverse set of people, not only in
             external factors, but internal factors as well. We have many
             differing opinions, often those of which can cause divide amongst us
@@ -18,7 +18,7 @@ export default function AboutSection() {
             others an opportunity to do so.
           </p>
           <h1 className="text-3xl mt-8 mb-3">How it works?</h1>
-          <p className="sm:w-4/5 w-1/2 mx-auto">
+          <p className="sm:w-full sm:p-2 lg:w-1/2 mx-auto">
             We will provide you with a series of questions &amp; after you will
             be allowed to guess what percentage of people picked each answer.
             But please don&apos;t be surprised if the questions are a little
