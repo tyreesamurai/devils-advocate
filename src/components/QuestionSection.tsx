@@ -1,8 +1,10 @@
 "use client";
-import questionData from "@/lib/types";
+import sectionData from "@/lib/types";
+import questionData from "@/lib/questionData";
 import React, { useState } from "react";
+import Link from "next/link";
 
-export default function QuestionSection(props: { questionSet: questionData }) {
+export default function QuestionSection(props: { questionSet: sectionData }) {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
   const [transitioning, setTransitioning] = useState(false);
@@ -43,7 +45,32 @@ export default function QuestionSection(props: { questionSet: questionData }) {
       >
         {isFinished ? (
           <div>
-            <h1>You&apos;re done now!</h1>
+            <h2 className="text-xl font-semibold mb-2">
+              Where would you like to go next?
+            </h2>
+
+            <div className="space-y-2">
+              <Link href={`/`}>
+                <button
+                  className={`w-full px-3 my-2 py-2 rounded text-white bg-blue-400 hover:bg-blue-600`}
+                >
+                  About Section
+                </button>
+              </Link>
+              {questionData.map((questionSet, index) => {
+                if (questionSet.topic === topic) return null;
+
+                return (
+                  <Link key={index} href={`/${questionSet.topic}/`}>
+                    <button
+                      className={`w-full px-3 my-2 py-2 rounded text-white bg-blue-400 hover:bg-blue-600`}
+                    >
+                      {questionSet.topic}
+                    </button>
+                  </Link>
+                );
+              })}
+            </div>
           </div>
         ) : (
           currentQuestion && (

@@ -90,8 +90,51 @@ const questionData: sectionData[] = [
     ],
   },
   {
-    topic: "To Be Determined",
-    questions: [],
+    topic: "Conflict in Ukraine",
+    questions: [
+      {
+        text: "How closely have you been following news about Russia's invasion of Ukraine?",
+        answers: [
+          { text: "Extremely closely", data: 6 },
+          { text: "Very closely", data: 14 },
+          { text: "Somewhat closely", data: 40 },
+          { text: "Not too closely", data: 27 },
+          { text: "Not at all closely", data: 13 },
+          { text: "No Answer", data: 0 },
+        ],
+      },
+      {
+        text: "Do you approve or disapprove of the Biden Administration's response to Russia's invasion of Ukraine?",
+        answers: [
+          { text: "Strongly approve", data: 13 },
+          { text: "Somewhat approve", data: 25 },
+          { text: "Somewhat disapprove", data: 21 },
+          { text: "Strongly disapprove", data: 20 },
+          { text: "Not Sure", data: 20 },
+          { text: "No Answer", data: 1 },
+        ],
+      },
+      {
+        text: "When it comes to Russia's invasion of Ukraine, do you think the U.S. is providing ...",
+        answers: [
+          { text: "Too much support to Ukraine", data: 31 },
+          { text: "Not enough support to Ukraine", data: 18 },
+          { text: "About the right amount of support to Ukraine", data: 29 },
+          { text: "Not Sure", data: 22 },
+          { text: "No Answer", data: 1 },
+        ],
+      },
+      {
+        text: "How much of a threat to U.S. interests is Russia's invasion of Ukraine?",
+        answers: [
+          { text: "A major threat", data: 33 },
+          { text: "A minor threat", data: 34 },
+          { text: "Not a threat", data: 10 },
+          { text: "Not Sure", data: 22 },
+          { text: "No Answer", data: 1 },
+        ],
+      },
+    ],
   },
   {
     topic: "Question 3",
