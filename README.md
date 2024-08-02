@@ -29,4 +29,5 @@ This logic should work for each question & then at the end of the quiz the user 
 - [ ] Complete all the question sets
 - [ ] Add the chart
 - [ ] Get chart to populate when user submits
+- [ ] Add source section at the bottom of each question & probably in the about page as well
 - [ ] Make the website as a whole prettier & neater in appearance
