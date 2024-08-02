@@ -29,3 +29,8 @@ TODOs:
 - [ ] Get chart to populate when user submits
 - [ ] Add source section at the bottom of each question & probably in the about page as well
 - [ ] Make the website as a whole prettier & neater in appearance
+
+Currently the section that is the closest to completion is the second button listed: "Conflict in Ukraine". Though they all use the same logic so all I have to do is add the question set in & it will be the same for all of them.
+
+> [!IMPORTANT]
+> TO VIEW THE WEBSITE CLICK THE LINK IN THE TOP RIGHT UNDER THE ABOUT SECTION OR HERE: [Link to website](https://devils-advocate-fawn.vercel.app/)
