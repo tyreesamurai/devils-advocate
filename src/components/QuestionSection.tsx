@@ -15,6 +15,8 @@ export default function QuestionSection(props: { questionSet: questionData }) {
     setSelectedAnswer((prevSelectedAnswer) =>
       prevSelectedAnswer === answer ? null : answer,
     );
+
+    console.log("Selected Answer: ", answer);
   }
 
   const handleNextQuestion = () => {
@@ -29,16 +31,16 @@ export default function QuestionSection(props: { questionSet: questionData }) {
   };
 
   return (
-    <div className="p-6 min-h-screen flex flex-col items-center justify-center">
-      <h1 className="text-3xl font-bold mb-6">{topic}</h1>
+    <div className="p-4 min-h-screen flex flex-col items-center justify-center">
+      <h1 className="text-2xl font-bold mb-4">{topic}</h1>
       <div
-        className={`w-full max-w-md p-6 bg-white rounded-lg shadow-lg transition-opacity duration-300 ${
+        className={`w-full max-w-md p-4 bg-gray-700 rounded-lg shadow-md transition-opacity duration-300 ${
           transitioning ? "opacity-50" : "opacity-100"
         }`}
       >
         {currentQuestion && (
           <div>
-            <h2 className="text-xl  font-semibold mb-4">
+            <h2 className="text-xl font-semibold mb-2">
               {currentQuestion.text}
             </h2>
             <div className="space-y-2">
@@ -47,10 +49,10 @@ export default function QuestionSection(props: { questionSet: questionData }) {
                   key={index}
                   onClick={() => handleAnswerSelection(answer.text)}
                   disabled={transitioning}
-                  className={`w-full px-4 py-2 rounded-lg text-white font-medium ${
-                    transitioning
-                      ? "bg-gray-300"
-                      : "bg-blue-500 hover:bg-blue-600"
+                  className={`w-full px-3 py-2 rounded ${
+                    answer.text === selectedAnswer
+                      ? "bg-blue-600 text-white"
+                      : "bg-blue-400 text-white hover:bg-blue-500"
                   }`}
                 >
                   {answer.text}
@@ -60,10 +62,10 @@ export default function QuestionSection(props: { questionSet: questionData }) {
             <button
               onClick={handleNextQuestion}
               disabled={selectedAnswer === null || transitioning}
-              className={`mt-4 w-full px-4 py-2 rounded-lg text-white font-medium ${
+              className={`mt-4 w-full px-4 py-2 rounded ${
                 selectedAnswer === null || transitioning
-                  ? "bg-gray-300"
-                  : "bg-green-500 hover:bg-green-600"
+                  ? "bg-gray-400 text-white"
+                  : "bg-green-500 text-white hover:bg-green-600"
               }`}
             >
               Next
