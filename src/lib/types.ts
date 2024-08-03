@@ -1,6 +1,7 @@
 type sectionData = {
   topic: string;
   questions: question[];
+  source: string;
 };
 
 type question = {
