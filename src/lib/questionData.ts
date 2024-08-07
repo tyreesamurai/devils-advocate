@@ -256,7 +256,7 @@ const questionData: sectionData[] = [
       "Greenwood, Shannon. “Americans’ Views of the Israel-Hamas War.” Pew Research Center, Pew Research Center, 8 Dec. 2023, www.pewresearch.org/politics/2023/12/08/americans-views-of-the-israel-hamas-war/. ",
   },
   {
-    topic: "Works",
+    topic: "Playground",
     questions: [],
     source: "",
   },

@@ -27,16 +27,17 @@ export default function AboutSection() {
             start, please pick a topic that you would like to start with.
           </p>
         </div>
-        <div className="flex flex-wrap">
+        <div className="flex">
           {questionData.map((questionSet, index) => (
-            <div
+            <Link
               key={index}
-              className="border rounded-xl mx-auto p-5 transition duration-300 hover:bg-red-600"
+              className="mx-auto"
+              href={`/${questionSet.topic}/`}
             >
-              <Link href={`/${questionSet.topic}/`}>
+              <div className="border rounded-xl p-5 transition duration-300 hover:bg-red-600">
                 <h1>{questionSet.topic}</h1>
-              </Link>
-            </div>
+              </div>
+            </Link>
           ))}
         </div>
       </div>

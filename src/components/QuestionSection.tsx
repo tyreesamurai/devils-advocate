@@ -3,6 +3,8 @@ import sectionData from "@/lib/types";
 import questionData from "@/lib/questionData";
 import React, { useState } from "react";
 import Link from "next/link";
+import { Chart as ChartJS } from "chart.js/auto";
+import { Bar, Doughnut } from "react-chartjs-2";
 
 export default function QuestionSection(props: { questionSet: sectionData }) {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -36,10 +38,10 @@ export default function QuestionSection(props: { questionSet: sectionData }) {
   };
 
   return (
-    <div className="p-4 min-h-screen flex flex-col items-center justify-center">
+    <div className="p-4 min-h-screen flex-wrap items-center text-center justify-center">
       <h1 className="text-2xl font-bold mb-4">{topic}</h1>
       <div
-        className={`w-full max-w-md p-4 bg-gray-700 rounded-lg shadow-md transition-opacity duration-300 ${
+        className={`w-full p-4 bg-gray-700 rounded-lg mb-20 shadow-md transition-opacity duration-300 ${
           transitioning ? "opacity-50" : "opacity-100"
         }`}
       >
@@ -108,6 +110,24 @@ export default function QuestionSection(props: { questionSet: sectionData }) {
             </div>
           )
         )}
+      </div>
+
+      <div
+        className={`w-full p-4 bg-gray-700 rounded-lg shadow-md transition-opacity duration-300 ${
+          transitioning ? "opacity-50" : "opacity-100"
+        }`}
+      >
+        <Bar
+          data={{
+            labels: [...currentQuestion.answers.map((answer) => answer.text)],
+            datasets: [
+              {
+                label: "Percentage of people selected",
+                data: [...currentQuestion.answers.map((answer) => answer.data)],
+              },
+            ],
+          }}
+        />
       </div>
     </div>
   );

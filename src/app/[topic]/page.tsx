@@ -1,7 +1,7 @@
 import questionData from "@/lib/questionData";
 import QuestionSection from "@/components/QuestionSection";
 
-export default function Page(params: { params: { topic: string } }) {
+export default function QuestionPage(params: { params: { topic: string } }) {
   const questionSet = questionData.find(
     (questionSet) =>
       questionSet.topic.trim() == params.params.topic.replaceAll("%20", " "),
